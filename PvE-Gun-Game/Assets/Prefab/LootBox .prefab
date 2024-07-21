@@ -275,14 +275,13 @@ MonoBehaviour:
   useRange: 5
   lid: {fileID: 6983811509451867582}
   Spawnpoint: {fileID: 6388569279887035722}
+  GiveXP: 10
+  mainManager: {fileID: 0}
   Gun:
   - {fileID: 8897196234057956297, guid: a55064b5a21f72640997d16718f93f60, type: 3}
   - {fileID: 2444832540008070233, guid: ce98030aa9892a445a3a3a877ec0a5aa, type: 3}
   - {fileID: 8972575013687934069, guid: a75b5f1436b87b34e825aa61292fa44c, type: 3}
   - {fileID: 279693250292828516, guid: 40bf0531330e6834f83bc900c8eea326, type: 3}
-  Ammo:
-  - {fileID: 6362367506685585846, guid: 722294170ddab4e4488f84d88b651226, type: 3}
-  - {fileID: 6828217370233994915, guid: 0f1b20be3a8365945ab83c99b9941111, type: 3}
   Item:
   - {fileID: 8938553725694050628, guid: 5eda76ea9cf791048a406e382b0b3b06, type: 3}
   - {fileID: 8457455715765196781, guid: b1768f07482e4694cb2a83bea4b7cea9, type: 3}

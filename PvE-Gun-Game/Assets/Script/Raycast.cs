@@ -7,13 +7,13 @@ public class Raycast : MonoBehaviour
     [SerializeField] private LayerMask Interactable;
     [SerializeField] private LayerMask Collectable;
 
-    MainManger IM;
-    public GameObject mainManger;
+    MainManager IM;
+    public GameObject mainManager;
     public GameObject player;
 
     void Start()
     {
-        IM = mainManger.GetComponent<MainManger>();
+        IM = mainManager.GetComponent<MainManager>();
 
     }
 
@@ -32,24 +32,72 @@ public class Raycast : MonoBehaviour
             if (Interactable.value == (1 << hit.collider.gameObject.layer))
             {
 
-                LootBox box = hit.collider.GetComponent<LootBox>();
-                if (box != null)
+                LootBox Lbox = hit.collider.GetComponent<LootBox>();
+                if (Lbox != null)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        if (hit.distance < box.useRange)
+                        if (hit.distance < Lbox.useRange)
                         {
                             Debug.Log("Open");
-                            box.OpenBox();
+                            Lbox.OpenBox();
 
                         }
                     }
 
                 }
+
+                AmmoBox Abox = hit.collider.GetComponent<AmmoBox>();
+                if (Abox != null)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        if (hit.distance < Abox.useRange)
+                        {
+                            Debug.Log("Open");
+                            Abox.OpenBox();
+
+                        }
+                    }
+                }
             }
 
+
+        if (Collectable.value == (1 << hit.collider.gameObject.layer))
+        {
+
+            CollectWoodPlank WP = hit.collider.GetComponent<CollectWoodPlank>();
+            if (WP != null)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if (hit.distance < WP.pickUpRange)
+                    {
+                        Debug.Log("Open");
+                        WP.CollectItem();
+
+                    }
+                }
+
+            }
+
+            CollectAmmo CA = hit.collider.GetComponent<CollectAmmo>();
+            if (CA != null)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if (hit.distance < CA.pickUpRange)
+                    {
+                        Debug.Log("Open");
+                        CA.CollectItem();
+
+                    }
+                }
+
+
+
+            }
         }
-
-
+        }
     }
 }
