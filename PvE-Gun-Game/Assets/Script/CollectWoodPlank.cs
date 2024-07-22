@@ -8,7 +8,9 @@ public class CollectWoodPlank : MonoBehaviour
     MainManager MM;
 
     public int pickUpRange;
+    [Space]
     public int GiveWoodPlanks;
+    [Space]
     public int GiveXP;
     void Start()
     {

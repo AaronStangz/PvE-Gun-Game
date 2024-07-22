@@ -5,9 +5,14 @@ using UnityEngine;
 public class AmmoBox : MonoBehaviour
 {
     public float useRange;
-    public GameObject lid;
+    [Space]
+    public GameObject ClosedLid;
+    public GameObject OpenLid;
+    [Space]
     public Transform Spawnpoint;
+    [Space]
     public int GiveXP;
+    [Space]
     public GameObject mainManager;
     MainManager MM;
     //public ParticleSystem openParticle;
@@ -22,11 +27,15 @@ public class AmmoBox : MonoBehaviour
 
     public void OpenBox()
     {
-        Destroy(lid);
-        MM.PlayerLevel += GiveXP;
-        // openParticle.Play();
-        Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
-        Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
-        Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+        if (ClosedLid.activeSelf)
+        {
+            ClosedLid.SetActive(false);
+            OpenLid.SetActive(true);
+            MM.PlayerLevel += GiveXP;
+            // openParticle.Play();
+            Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+            Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+            Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+        }
     }
 }

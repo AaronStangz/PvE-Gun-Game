@@ -6,8 +6,9 @@ public class CollectAmmo : MonoBehaviour
 {
     public GameObject mainManager;
     MainManager MM;
-
+    [Space]
     public int pickUpRange;
+    [Space]
 
     public int GiveHeavyBullets;
     public int GiveLightBullets;

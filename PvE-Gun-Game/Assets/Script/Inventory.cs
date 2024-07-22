@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public GameObject inventoryGameObject;
     public GameObject inventoryGUI;
+    [Space]
     public GameObject playerCamera;
     public GameObject mainManger;
     MainManager MM;

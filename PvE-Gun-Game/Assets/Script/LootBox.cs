@@ -7,9 +7,14 @@ using static UnityEngine.InputManagerEntry;
 public class LootBox : MonoBehaviour
 {
     public float useRange;
-    public GameObject lid;
+    [Space]
+    public GameObject ClosedLid;
+    public GameObject OpenLid;
+    [Space]
     public Transform Spawnpoint;
+    [Space]
     public int GiveXP;
+    [Space]
     public GameObject mainManager;
     MainManager MM;
     //public ParticleSystem openParticle;
@@ -25,11 +30,14 @@ public class LootBox : MonoBehaviour
 
     public void OpenBox()
     {
-        
-        Destroy(lid);
+        if(ClosedLid.activeSelf)
+        {
+        ClosedLid.SetActive(false);
+        OpenLid.SetActive(true);
         MM.PlayerLevel += GiveXP;
         // openParticle.Play();
         Instantiate(Gun[Random.Range(0, Gun.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
         Instantiate(Item[Random.Range(0, Item.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+        }
     }
 }

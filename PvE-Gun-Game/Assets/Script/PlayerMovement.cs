@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprit = 12f;
     public float jumpHight = 2f;
     public float gravity = -30;
-
+    [Space]
     public Transform groundCheck;
     public float groundDistance;
     public LayerMask groundMask;
