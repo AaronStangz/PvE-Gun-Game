@@ -32,6 +32,10 @@ public class CustomGun : MonoBehaviour
     [Header("Graphics")]
     public GameObject muzzleFlash;
     public Slider slider;
+    public Slider crosshairs1;
+    public Slider crosshairs2;
+    public Slider crosshairs3;
+    public Slider crosshairs4;
     //public TextMeshProUGUI rToReload;
     //public GameObject rToreloadText;
 
@@ -132,6 +136,7 @@ public class CustomGun : MonoBehaviour
         bulletsLeft--;
         bulletsShot++;
         StartCoroutine(GuiTimer(timeBetweenShooting));
+        StartCoroutine(CrossHairTimer(timeBetweenShooting));
         if (allowInvoke)
         {
             Invoke("ResetShot", timeBetweenShooting);
@@ -154,6 +159,20 @@ public class CustomGun : MonoBehaviour
         }
         slider.value = 0;
     }
+
+    private IEnumerator CrossHairTimer(float timeBetweenShots)
+    {
+        crosshairs1.maxValue = timeBetweenShots;
+        float frac = timeBetweenShots / 40;
+        for (int i = 40; i > 40; i--)
+        {
+            float percent = (float)i * frac;
+            crosshairs1.value = percent;
+            yield return new WaitForSeconds(frac);
+        }
+        crosshairs1.value = crosshairs1.maxValue;
+    }
+
     private IEnumerator ReloadTimer(float reloadTime)
     {
         slider.maxValue = reloadTime;
