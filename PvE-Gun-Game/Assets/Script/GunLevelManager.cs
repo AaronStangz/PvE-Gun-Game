@@ -8,18 +8,26 @@ public class GunLevelManager : MonoBehaviour
     public GameObject mainManager;
     private MainManager MM;
 
-    public List<Image> BlackhawkS14Level;
-    public List<Image> SentinelS37Level;
-    public List<Image> VanguardM17Level;
-    public List<Image> ValkyrieM76Level;
-    public List<Image> ReaperP12Level;
-    public List<Image> PredatorP63Level;
-    public List<Image> ThunderboltA16Level;
-    public List<Image> GuardianA37Level;
-    public List<Image> PhantomS47Level;
-    public List<Image> HavocS13Level;
-    public List<Image> SabreR23Level;
-    public List<Image> TitanR30Level;
+    // ARS
+    public List<Image> BlazeBreakerLevel;
+    public List<Image> StormScorcherLevel;
+    public List<Image> PulsefireLevel;
+    // SMG
+    public List<Image> SprayStrikerLevel;
+    public List<Image> BuzzBlitzerLevel;
+    public List<Image> RattleRipperLevel;
+    // Pistols
+    public List<Image> PowderPopperLevel;
+    public List<Image> QuickdrawBlasterLevel;
+    public List<Image> BoltBouncerLevel;
+    // Shotguns
+    public List<Image> BoomBusterLevel;
+    public List<Image> BlastBarrelLevel;
+    public List<Image> ThunderThumperLevel;
+    // Snipers
+    public List<Image> StormshotSniperLevel;
+    public List<Image> ShadowSlicerLevel;
+    public List<Image> EagleEyeLevel;
 
     private Dictionary<int, Color> levelColors = new Dictionary<int, Color>
     {
@@ -37,35 +45,41 @@ public class GunLevelManager : MonoBehaviour
 
         gunLevelLists = new Dictionary<string, List<Image>>
         {
-            { "BlackhawkS14Level", BlackhawkS14Level },
-            { "SentinelS37Level", SentinelS37Level },
-            { "VanguardM17Level", VanguardM17Level },
-            { "ValkyrieM76Level", ValkyrieM76Level },
-            { "ReaperP12Level", ReaperP12Level },
-            { "PredatorP63Level", PredatorP63Level },
-            { "ThunderboltA16Level", ThunderboltA16Level },
-            { "GuardianA37Level", GuardianA37Level },
-            { "PhantomS47Level", PhantomS47Level },
-            { "HavocS13Level", HavocS13Level },
-            { "SabreR23Level", SabreR23Level },
-            { "TitanR30Level", TitanR30Level }
+            { "BlazeBreakerLevel", BlazeBreakerLevel },
+            { "StormScorcherLevel", StormScorcherLevel },
+            { "PulsefireLevel", PulsefireLevel },
+            { "SprayStrikerLevel", SprayStrikerLevel },
+            { "BuzzBlitzerLevel", BuzzBlitzerLevel },
+            { "RattleRipperLevel", RattleRipperLevel },
+            { "PowderPopperLevel", PowderPopperLevel },
+            { "QuickdrawBlasterLevel", QuickdrawBlasterLevel },
+            { "BoltBouncerLevel", BoltBouncerLevel },
+            { "BoomBusterLevel", BoomBusterLevel },
+            { "BlastBarrelLevel", BlastBarrelLevel },
+            { "ThunderThumperLevel", ThunderThumperLevel},
+            { "StormshotSniperLevel", StormshotSniperLevel },
+            { "ShadowSlicerLevel", ShadowSlicerLevel },
+            { "EagleEyeLevel", EagleEyeLevel }
         };
     }
 
     void Update()
     {
-        UpdateGunLevelColors("BlackhawkS14Level", MM.BlackhawkS14Level);
-        UpdateGunLevelColors("SentinelS37Level", MM.SentinelS37Level);
-        UpdateGunLevelColors("VanguardM17Level", MM.VanguardM17Level);
-        UpdateGunLevelColors("ValkyrieM76Level", MM.ValkyrieM76Level);
-        UpdateGunLevelColors("ReaperP12Level", MM.ReaperP12Level);
-        UpdateGunLevelColors("PredatorP63Level", MM.PredatorP63Level);
-        UpdateGunLevelColors("ThunderboltA16Level", MM.ThunderboltA16Level);
-        UpdateGunLevelColors("GuardianA37Level", MM.GuardianA37Level);
-        UpdateGunLevelColors("PhantomS47Level", MM.PhantomS47Level);
-        UpdateGunLevelColors("HavocS13Level", MM.HavocS13Level);
-        UpdateGunLevelColors("SabreR23Level", MM.SabreR23Level);
-        UpdateGunLevelColors("TitanR30Level", MM.TitanR30Level);
+        UpdateGunLevelColors("BlazeBreakerLevel", MM.BlazeBreakerLevel);
+        UpdateGunLevelColors("StormScorcherLevel", MM.StormScorcherLevel);
+        UpdateGunLevelColors("PulsefireLevel", MM.PulsefireLevel);
+        UpdateGunLevelColors("SprayStrikerLevel", MM.SprayStrikerLevel);
+        UpdateGunLevelColors("BuzzBlitzerLevel", MM.BuzzBlitzerLevel);
+        UpdateGunLevelColors("RattleRipperLevel", MM.RattleRipperLevel);
+        UpdateGunLevelColors("PowderPopperLevel", MM.PowderPopperLevel);
+        UpdateGunLevelColors("QuickdrawBlasterLevel", MM.QuickdrawBlasterLevel);
+        UpdateGunLevelColors("BoltBouncerLevel", MM.BoltBouncerLevel);
+        UpdateGunLevelColors("BoomBusterLevel", MM.BoomBusterLevel);
+        UpdateGunLevelColors("BlastBarrelLevel", MM.BlastBarrelLevel);
+        UpdateGunLevelColors("ThunderThumperLevel", MM.ThunderThumperLevel);
+        UpdateGunLevelColors("StormshotSniperLevel", MM.StormshotSniperLevel);
+        UpdateGunLevelColors("ShadowSlicerLevel", MM.ShadowSlicerLevel);
+        UpdateGunLevelColors("EagleEyeLevel", MM.EagleEyeLevel);
     }
 
     private void UpdateGunLevelColors(string gunLevelName, int level)

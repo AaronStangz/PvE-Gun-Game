@@ -52,7 +52,7 @@ public class Inventory : MonoBehaviour
 
     public void UpgradeText()
     {
-        ItemText[0].text = "Wood Planks: " + MM.WoodPlanks + " / " + "5";
+        ItemText[0].text = "Wood Planks: " + MM.Planks + " / " + "5";
 
         AmmoText[0].text = "Heavy Bullets: " + MM.HeavyBullets + " / " + "999";
         AmmoText[1].text = "Light Bullets: " + MM.LightBullets + " / " + "999";

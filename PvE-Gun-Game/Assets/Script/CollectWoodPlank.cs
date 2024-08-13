@@ -9,7 +9,7 @@ public class CollectWoodPlank : MonoBehaviour
 
     public int pickUpRange;
     [Space]
-    public int GiveWoodPlanks;
+    public int GivePlanks;
     [Space]
     public int GiveXP;
     void Start()
@@ -20,8 +20,8 @@ public class CollectWoodPlank : MonoBehaviour
 
     public void CollectItem()
     {
-        MM.PlayerLevel += GiveXP;
-        MM.WoodPlanks += GiveWoodPlanks;
+        MM.Xp += GiveXP;
+        MM.Planks += GivePlanks;
         Destroy(gameObject);
     }
 }

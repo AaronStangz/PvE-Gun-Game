@@ -9,103 +9,141 @@ public class UpgradeGuns : MonoBehaviour
     public GameObject mainManager;
     MainManager MM;
 
-    [Header("GunPartsNeeded")]
-    public int Sniper1PartsNeeded;
-    public int Sniper2PartsNeeded;
-    public int SMG1PartsNeeded;
-    public int SMG2PartsNeeded;
-    public int Pistol1PartsNeeded;
-    public int Pistol2PartsNeeded;
-    public int AR1PartsNeeded;
-    public int AR2PartsNeeded;
-    public int ShotGun1PartsNeeded;
-    public int ShotGun2PartsNeeded;
-    public int RocketLancher1PartsNeeded;
-    public int RocketLancher2PartsNeeded;
+    [Header("GunObj")]
+    public List<GameObject> BlazeBreakerObj;
+    public List<GameObject> StormScorcherObj;
+    public List<GameObject> PulsefireObj;
+    // SMG
+    public List<GameObject> SprayStrikerObj;
+    public List<GameObject> BuzzBlitzerObj;
+    public List<GameObject> RattleRipperObj;
+    // Pistols
+    public List<GameObject> PowderPopperObj;
+    public List<GameObject> QuickdrawBlasterObj;
+    public List<GameObject> BoltBouncerObj;
+    // Shotguns
+    public List<GameObject> BoomBusterObj;
+    public List<GameObject> BlastBarrelObj;
+    public List<GameObject> ThunderThumperObj;
+    // Snipers
+    public List<GameObject> StormshotSniperObj;
+    public List<GameObject> ShadowSlicerObj;
+    public List<GameObject> EagleEyeObj;
 
-    [Header("GunXpNeed")]
-    public int Sniper1XpNeeded;
-    public int Sniper2XpNeeded;
-    public int SMG1XpNeeded;
-    public int SMG2XpNeeded;
-    public int Pistol1XpNeeded;
-    public int Pistol2XpNeeded;
-    public int AR1XpNeeded;
-    public int AR2XpNeeded;
-    public int ShotGun1XpNeeded;
-    public int ShotGun2XpNeeded;
-    public int RocketLancher1XpNeeded;
-    public int RocketLancher2XpNeeded;
+    [Header("Gun Parts Needed")]
+    // ARS
+    public int BlazeBreakerPartsNeeded;
+    public int StormScorcherPartsNeeded;
+    public int PulsefirePartsNeeded;
+    // SMG
+    public int SprayStrikerPartsNeeded;
+    public int BuzzBlitzerPartsNeeded;
+    public int RattleRipperPartsNeeded;
+    // Pistols
+    public int PowderPopperPartsNeeded;
+    public int QuickdrawBlasterPartsNeeded;
+    public int BoltBouncerPartsNeeded;
+    // Shotguns
+    public int BoomBusterPartsNeeded;
+    public int BlastBarrelPartsNeeded;
+    public int ThunderThumperPartsNeeded;
+    // Snipers
+    public int StormshotSniperPartsNeeded;
+    public int ShadowSlicerPartsNeeded;
+    public int EagleEyePartsNeeded;
 
-    [Header("GunText")]
-    public TMP_Text Sniper1XpText;
-    public TMP_Text Sniper2XpText;
-    public TMP_Text SMG1XpText;
-    public TMP_Text SMG2XpText;
-    public TMP_Text Pistol1XpText;
-    public TMP_Text Pistol2XpText;
-    public TMP_Text AR1XpText;
-    public TMP_Text AR2XpText;
-    public TMP_Text ShotGun1XpText;
-    public TMP_Text ShotGun2XpText;
-    public TMP_Text RocketLancher1XpText;
-    public TMP_Text RocketLancher2XpText;
+    [Header("Gun Xp Need")]
+    // ARS
+    public int BlazeBreakerXpNeeded;
+    public int StormScorcherXpNeeded;
+    public int PulsefireXpNeeded;
+    // SMG
+    public int SprayStrikerXpNeeded;
+    public int BuzzBlitzerXpNeeded;
+    public int RattleRipperXpNeeded;
+    // Pistols
+    public int PowderPopperXpNeeded;
+    public int QuickdrawBlasterXpNeeded;
+    public int BoltBouncerXpNeeded;
+    // Shotguns
+    public int BoomBusterXpNeeded;
+    public int BlastBarrelXpNeeded;
+    public int ThunderThumperXpNeeded;
+    // Snipers
+    public int StormshotSniperXpNeeded;
+    public int ShadowSlicerXpNeeded;
+    public int EagleEyeXpNeeded;
 
-    [Header("GunText")]
-    public TMP_Text Sniper1Text;
-    public TMP_Text Sniper2Text;
-    public TMP_Text SMG1Text;
-    public TMP_Text SMG2Text;
-    public TMP_Text Pistol1Text;
-    public TMP_Text Pistol2Text;
-    public TMP_Text AR1Text;
-    public TMP_Text AR2Text;
-    public TMP_Text ShotGun1Text;
-    public TMP_Text ShotGun2Text;
-    public TMP_Text RocketLancher1Text;
-    public TMP_Text RocketLancher2Text;
+    [Header("Gun Xp Text")]
+    // ARS
+    public TMP_Text BlazeBreakerXPText;
+    public TMP_Text StormScorcherXPText;
+    public TMP_Text PulsefireXPText;
+    // SMG
+    public TMP_Text SprayStrikerXPText;
+    public TMP_Text BuzzBlitzerXPText;
+    public TMP_Text RattleRipperXPText;
+    // Pistols
+    public TMP_Text PowderPopperXPText;
+    public TMP_Text QuickdrawBlasterXPText;
+    public TMP_Text BoltBouncerXPText;
+    // Shotguns
+    public TMP_Text BoomBusterXPText;
+    public TMP_Text BlastBarrelXPText;
+    public TMP_Text ThunderThumperXPText;
+    // Snipers
+    public TMP_Text StormshotSniperXPText;
+    public TMP_Text ShadowSlicerXPText;
+    public TMP_Text EagleEyeXPText;
 
-    [Header("GunLocks")]
-    public List<GameObject> Sniper1Lock;
-    public List<GameObject> Sniper2Lock;
-    public List<GameObject> SMG1Lock;
-    public List<GameObject> SMG2Lock;
-    public List<GameObject> Pistol1Lock;
-    public List<GameObject> Pistol2Lock;
-    public List<GameObject> AR1Lock;
-    public List<GameObject> AR2Lock;
-    public List<GameObject> ShotGun1Lock;
-    public List<GameObject> ShotGun2Lock;
-    public List<GameObject> RocketLancher1Lock;
-    public List<GameObject> RocketLancher2Lock;
+    [Header("Gun Parts Text")]
+    // ARS
+    public TMP_Text BlazeBreakerPartText;
+    public TMP_Text StormScorcherPartText;
+    public TMP_Text PulsefirePartText;
+    // SMG
+    public TMP_Text SprayStrikerPartText;
+    public TMP_Text BuzzBlitzerPartText;
+    public TMP_Text RattleRipperPartText;
+    // Pistols
+    public TMP_Text PowderPopperPartText;
+    public TMP_Text QuickdrawBlasterPartText;
+    public TMP_Text BoltBouncerPartText;
+    // Shotguns
+    public TMP_Text BoomBusterPartText;
+    public TMP_Text BlastBarrelPartText;
+    public TMP_Text ThunderThumperPartText;
+    // Snipers
+    public TMP_Text StormshotSniperPartText;
+    public TMP_Text ShadowSlicerPartText;
+    public TMP_Text EagleEyePartText;
 
-    [Header("Gun")]
-    public List<GameObject> BlackhawkS14;
-    public List<GameObject> SentinelS37;
-    public List<GameObject> VanguardM17;
-    public List<GameObject> ValkyrieM76;
-    public List<GameObject> ReaperP12;
-    public List<GameObject> PredatorP63;
-    public List<GameObject> ThunderboltA16;
-    public List<GameObject> GuardianA37;
-    public List<GameObject> PhantomS47;
-    public List<GameObject> HavocS13;
-    public List<GameObject> SabreR23;
-    public List<GameObject> TitanR30;
+    [Header("Gun Parts Text")]
+    public List<TMP_Text> SturdyMechanicalPartsText;
+    public List<TMP_Text> SleekMechanicalPartsText;
+    public List<TMP_Text> RustyMechanicalPartsText;
 
-    [Header("GunLevelSlider")]
-    public List<Slider> BlackhawkS14Level;
-    public List<Slider> SentinelS37Level;
-    public List<Slider> VanguardM17Level;
-    public List<Slider> ValkyrieM76Level;
-    public List<Slider> ReaperP12Level;
-    public List<Slider> PredatorP63Level;
-    public List<Slider> ThunderboltA16Level;
-    public List<Slider> GuardianA37Level;
-    public List<Slider> PhantomS47Level;
-    public List<Slider> HavocS13Level;
-    public List<Slider> SabreR23Level;
-    public List<Slider> TitanR30Level;
+    [Header("Gun Level Slider")]
+    // ARS
+    public List<Slider> BlazeBreakerLevel;
+    public List<Slider> StormScorcherLevel;
+    public List<Slider> PulsefireLevel;
+    // SMG
+    public List<Slider> SprayStrikerLevel;
+    public List<Slider> BuzzBlitzerLevel;
+    public List<Slider> RattleRipperLevel;
+    // Pistols
+    public List<Slider> PowderPopperLevel;
+    public List<Slider> QuickdrawBlasterLevel;
+    public List<Slider> BoltBouncerLevel;
+    // Shotguns
+    public List<Slider> BoomBusterLevel;
+    public List<Slider> BlastBarrelLevel;
+    public List<Slider> ThunderThumperLevel;
+    // Snipers
+    public List<Slider> StormshotSniperLevel;
+    public List<Slider> ShadowSlicerLevel;
+    public List<Slider> EagleEyeLevel;
 
     private void Awake()
     {
@@ -119,65 +157,89 @@ public class UpgradeGuns : MonoBehaviour
 
     public void UpgradePartsTexts()
     {
-        Sniper1Text.text = "Parts: " + MM.BlackhawkS14Parts + " / " + Sniper1PartsNeeded + " ";
-        Sniper2Text.text = "Parts: " + MM.SentinelS37Parts + " / " + Sniper2PartsNeeded + " ";
+        foreach (TMP_Text obj in SturdyMechanicalPartsText)
+        {
+            if (obj != null)
+            {
+                obj.text = "Parts: " + MM.SturdyMechanicalParts + " / " + "1 ";
+            }
+        }
+        foreach (TMP_Text obj in SleekMechanicalPartsText)
+        {
+            if (obj != null)
+            {
+                obj.text = "Parts: " + MM.SleekMechanicalParts + " / " + "1 ";
+            }
+        }
+        foreach (TMP_Text obj in RustyMechanicalPartsText)
+        {
+            if (obj != null)
+            {
+                obj.text = "Parts: " + MM.RustyMechanicalParts + " / " + "1 ";
+            }
+        }
 
-        SMG1Text.text = "Parts: " + MM.VanguardM17Parts + " / " + SMG1PartsNeeded + " ";
-        SMG2Text.text = "Parts: " + MM.ValkyrieM76Parts + " / " + SMG2PartsNeeded + " ";
 
-        Pistol1Text.text = "Parts: " + MM.ReaperP12Parts + " / " + Pistol1PartsNeeded + " ";
-        Pistol2Text.text = "Parts: " + MM.PredatorP63Parts + " / " + Pistol2PartsNeeded + " ";
+        BlazeBreakerPartText.text = "Parts: " + MM.BlazeBreakerParts + " / " + BlazeBreakerPartsNeeded + " ";
+        BlazeBreakerXPText.text = "Research XP: " + MM.ResearchXp + " / " + BlazeBreakerXpNeeded + " ";
 
-        AR1Text.text = "Parts: " + MM.ThunderboltA16Parts + " / " + AR1PartsNeeded + " ";
-        AR2Text.text = "Parts: " + MM.GuardianA37Parts + " / " + AR2PartsNeeded + " ";
+        StormScorcherPartText.text = "Parts: " + MM.StormScorcherParts + " / " + StormScorcherPartsNeeded + " ";
+        StormScorcherXPText.text = "Research XP: " + MM.ResearchXp + " / " + StormScorcherXpNeeded + " ";
 
-        ShotGun1Text.text = "Parts: " + MM.PhantomS47Parts + " / " + ShotGun1PartsNeeded + " ";
-        ShotGun2Text.text = "Parts: " + MM.HavocS13Parts + " / " + ShotGun2PartsNeeded + " ";
+        PulsefirePartText.text = "Parts: " + MM.PulsefireParts + " / " + PulsefirePartsNeeded + " ";
+        PulsefireXPText.text = "Research XP: " + MM.ResearchXp + " / " + PulsefireXpNeeded + " ";
 
-        RocketLancher1Text.text = "Parts: " + MM.SabreR23Parts + " / " + RocketLancher1PartsNeeded + " ";
-        RocketLancher2Text.text = "Parts: " + MM.TitanR30Parts + " / " + RocketLancher2PartsNeeded + " ";
+         SprayStrikerPartText.text = "Parts: " + MM. SprayStrikerParts + " / " +  SprayStrikerPartsNeeded + " ";
+         SprayStrikerXPText.text = "Research XP: " + MM.ResearchXp + " / " +  SprayStrikerXpNeeded + " ";
 
+        BuzzBlitzerPartText.text = "Parts: " + MM.BuzzBlitzerParts + " / " + BuzzBlitzerPartsNeeded + " ";
+        BuzzBlitzerXPText.text = "Research XP: " + MM.ResearchXp + " / " + BuzzBlitzerXpNeeded + " ";
 
+        RattleRipperPartText.text = "Parts: " + MM.RattleRipperParts + " / " + RattleRipperPartsNeeded + " ";
+        RattleRipperXPText.text = "Research XP: " + MM.ResearchXp + " / " + RattleRipperXpNeeded + " ";
 
-        Sniper1XpText.text = "Research XP: " + MM.ResearchXp + " / " + Sniper1XpNeeded + " ";
-        Sniper2XpText.text = "Research XP: " + MM.ResearchXp + " / " + Sniper2XpNeeded + " ";
+        PowderPopperPartText.text = "Parts: " + MM.PowderPopperParts + " / " + PowderPopperPartsNeeded + " ";
+        PowderPopperXPText.text = "Research XP: " + MM.ResearchXp + " / " + PowderPopperXpNeeded + " ";
 
-        SMG1XpText.text = "Research XP: " + MM.ResearchXp + " / " + SMG1XpNeeded + " ";
-        SMG2XpText.text = "Research XP: " + MM.ResearchXp + " / " + SMG2XpNeeded + " ";
+        QuickdrawBlasterPartText.text = "Parts: " + MM.QuickdrawBlasterParts + " / " + QuickdrawBlasterPartsNeeded + " ";
+        QuickdrawBlasterXPText.text = "Research XP: " + MM.ResearchXp + " / " + QuickdrawBlasterXpNeeded + " ";
 
-        Pistol1XpText.text = "Research XP: " + MM.ResearchXp + " / " + Pistol1XpNeeded + " ";
-        Pistol2XpText.text = "Research XP: " + MM.ResearchXp + " / " + Pistol2XpNeeded + " ";
+        BoltBouncerPartText.text = "Parts: " + MM.BoltBouncerParts + " / " + BoltBouncerPartsNeeded + " ";
+        BoltBouncerXPText.text = "Research XP: " + MM.ResearchXp + " / " + BoltBouncerXpNeeded + " ";
 
-        AR1XpText.text = "Research XP: " + MM.ResearchXp + " / " + AR1XpNeeded + " ";
-        AR2XpText.text = "Research XP: " + MM.ResearchXp + " / " + AR2XpNeeded + " ";
+        BoomBusterPartText.text = "Parts: " + MM.BoomBusterParts + " / " + BoomBusterPartsNeeded + " ";
+        BoomBusterXPText.text = "Research XP: " + MM.ResearchXp + " / " + BoomBusterXpNeeded + " ";
 
-        ShotGun1XpText.text = "Research XP: " + MM.ResearchXp + " / " + ShotGun1XpNeeded + " ";
-        ShotGun2XpText.text = "Research XP: " + MM.ResearchXp + " / " + ShotGun2XpNeeded + " ";
+        BlastBarrelPartText.text = "Parts: " + MM.BlastBarrelParts + " / " + BlastBarrelPartsNeeded + " ";
+        BlastBarrelXPText.text = "Research XP: " + MM.ResearchXp + " / " + BlastBarrelXpNeeded + " ";
 
-        RocketLancher1XpText.text = "Research XP: " + MM.ResearchXp + " / " + RocketLancher1XpNeeded + " ";
-        RocketLancher2XpText.text = "Research XP: " + MM.ResearchXp + " / " + RocketLancher2XpNeeded + " ";
+        ThunderThumperPartText.text = "Parts: " + MM.ThunderThumperParts + " / " + ThunderThumperPartsNeeded + " ";
+        ThunderThumperXPText.text = "Research XP: " + MM.ResearchXp + " / " + ThunderThumperXpNeeded + " ";
+
+        StormshotSniperPartText.text = "Parts: " + MM.StormshotSniperParts + " / " + StormshotSniperPartsNeeded + " ";
+        StormshotSniperXPText.text = "Research XP: " + MM.ResearchXp + " / " + StormshotSniperXpNeeded + " ";
+
+        ShadowSlicerPartText.text = "Parts: " + MM.ShadowSlicerParts + " / " + ShadowSlicerPartsNeeded + " ";
+        ShadowSlicerXPText.text = "Research XP: " + MM.ResearchXp + " / " + ShadowSlicerXpNeeded + " ";
+
+        EagleEyePartText.text = "Parts: " + MM.EagleEyeParts + " / " + EagleEyePartsNeeded + " ";
+        EagleEyeXPText.text = "Research XP: " + MM.ResearchXp + " / " + EagleEyeXpNeeded + " ";
+
 
     }
 
-    public void UpgradeSniper1()
+    public void BlazeBreaker()
     {
-        if(MM.BlackhawkS14Parts >= Sniper1PartsNeeded && MM.BlackhawkS14Level <= 10 && MM.ResearchXp >= Sniper1XpNeeded)
+        if(MM.BlazeBreakerParts >= BlazeBreakerPartsNeeded && MM.BlazeBreakerLevel <= 10 && MM.ResearchXp >= BlazeBreakerXpNeeded && MM.SturdyMechanicalParts >= 1)
         {
-            foreach (GameObject obj in Sniper1Lock)
-            {
-                if (obj != null)  
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in BlackhawkS14Level)
+            foreach (Slider obj in BlazeBreakerLevel)
             {
                 if (obj != null)
                 {
                     obj.value += 1f;
                 }
             }
-            foreach (GameObject obj in BlackhawkS14)
+            foreach (GameObject obj in BlazeBreakerObj)
             {
                 if (obj != null)
                 {
@@ -186,33 +248,27 @@ public class UpgradeGuns : MonoBehaviour
                     obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
                 }
             }
-            MM.BlackhawkS14Parts -= Sniper1PartsNeeded;
-            MM.ResearchXp -= Sniper1XpNeeded;
-            Sniper1PartsNeeded += 5;
-            MM.BlackhawkS14Level += 1;
+            MM.BlazeBreakerParts -= BlazeBreakerPartsNeeded;
+            MM.ResearchXp -= BlazeBreakerXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            BlazeBreakerPartsNeeded += 5;
+            MM.BlazeBreakerLevel += 1;
             MM.Xp += 50;
         }
     }
 
-    public void UpgradeSniper2()
+    public void StormScorcher()
     {
-        if (MM.SentinelS37Parts >= Sniper2PartsNeeded && MM.SentinelS37Level <= 10 && MM.ResearchXp >= Sniper2XpNeeded)
+        if (MM.StormScorcherParts >= StormScorcherPartsNeeded && MM.StormScorcherLevel <= 10 && MM.ResearchXp >= StormScorcherXpNeeded && MM.SturdyMechanicalParts >= 1)
         {
-            foreach (GameObject obj in Sniper2Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in SentinelS37Level)
+            foreach (Slider obj in StormScorcherLevel)
             {
                 if (obj != null)
                 {
                     obj.value += 1f;
                 }
             }
-            foreach (GameObject obj in SentinelS37)
+            foreach (GameObject obj in StormScorcherObj)
             {
                 if (obj != null)
                 {
@@ -221,33 +277,55 @@ public class UpgradeGuns : MonoBehaviour
                     obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
                 }
             }
-            MM.SentinelS37Parts -= Sniper2PartsNeeded;
-            MM.ResearchXp -= Sniper2XpNeeded;
-            Sniper2PartsNeeded += 5;
-            MM.SentinelS37Level += 1;
+            MM.StormScorcherParts -= StormScorcherPartsNeeded;
+            MM.ResearchXp -= StormScorcherXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            StormScorcherPartsNeeded += 5;
+            MM.StormScorcherLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void Pulsefire()
+    {
+        if (MM.PulsefireParts >= PulsefirePartsNeeded && MM.PulsefireLevel <= 10 && MM.ResearchXp >= PulsefireXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in PulsefireLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in PulsefireObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.PulsefireParts -= PulsefirePartsNeeded;
+            MM.ResearchXp -= PulsefireXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            PulsefirePartsNeeded += 5;
+            MM.PulsefireLevel += 1;
             MM.Xp += 50;
         }
     }
 
-    public void UpgradeSMG1()
+    public void SprayStriker()
     {
-        if (MM.VanguardM17Parts >= SMG1PartsNeeded && MM.VanguardM17Level <= 10 && MM.ResearchXp >= SMG1XpNeeded)
+        if (MM.SprayStrikerParts >= SprayStrikerPartsNeeded && MM.SprayStrikerLevel <= 10 && MM.ResearchXp >= SprayStrikerXpNeeded && MM.SturdyMechanicalParts >= 1)
         {
-            foreach (GameObject obj in SMG1Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in VanguardM17Level)
+            foreach (Slider obj in SprayStrikerLevel)
             {
                 if (obj != null)
                 {
                     obj.value += 1f;
                 }
             }
-            foreach (GameObject obj in VanguardM17)
+            foreach (GameObject obj in SprayStrikerObj)
             {
                 if (obj != null)
                 {
@@ -256,33 +334,307 @@ public class UpgradeGuns : MonoBehaviour
                     obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
                 }
             }
-            MM.VanguardM17Parts -= SMG1PartsNeeded;
-            MM.ResearchXp -= SMG1XpNeeded;
-            SMG1PartsNeeded += 5;
-            MM.VanguardM17Level += 1;
+            MM.SprayStrikerParts -= SprayStrikerPartsNeeded;
+            MM.ResearchXp -= SprayStrikerXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            SprayStrikerPartsNeeded += 5;
+            MM.SprayStrikerLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void  BuzzBlitzer()
+    {
+        if (MM. BuzzBlitzerParts >=  BuzzBlitzerPartsNeeded && MM. BuzzBlitzerLevel <= 10 && MM.ResearchXp >=  BuzzBlitzerXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in  BuzzBlitzerLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in  BuzzBlitzerObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM. BuzzBlitzerParts -=  BuzzBlitzerPartsNeeded;
+            MM.ResearchXp -=  BuzzBlitzerXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+             BuzzBlitzerPartsNeeded += 5;
+            MM. BuzzBlitzerLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void RattleRipper()
+    {
+        if (MM.RattleRipperParts >= RattleRipperPartsNeeded && MM.RattleRipperLevel <= 10 && MM.ResearchXp >= RattleRipperXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in RattleRipperLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in RattleRipperObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.RattleRipperParts -= RattleRipperPartsNeeded;
+            MM.ResearchXp -= RattleRipperXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            RattleRipperPartsNeeded += 5;
+            MM.RattleRipperLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void PowderPopper()
+    {
+        if (MM.PowderPopperParts >= PowderPopperPartsNeeded && MM.PowderPopperLevel <= 10 && MM.ResearchXp >= PowderPopperXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in PowderPopperLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in PowderPopperObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.PowderPopperParts -= PowderPopperPartsNeeded;
+            MM.ResearchXp -= PowderPopperXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            PowderPopperPartsNeeded += 5;
+            MM.PowderPopperLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void QuickdrawBlaster()
+    {
+        if (MM.QuickdrawBlasterParts >= QuickdrawBlasterPartsNeeded && MM.QuickdrawBlasterLevel <= 10 && MM.ResearchXp >= QuickdrawBlasterXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in QuickdrawBlasterLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in QuickdrawBlasterObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.QuickdrawBlasterParts -= QuickdrawBlasterPartsNeeded;
+            MM.ResearchXp -= QuickdrawBlasterXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            QuickdrawBlasterPartsNeeded += 5;
+            MM.QuickdrawBlasterLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void BoltBouncer()
+    {
+        if (MM.BoltBouncerParts >= BoltBouncerPartsNeeded && MM.BoltBouncerLevel <= 10 && MM.ResearchXp >= BoltBouncerXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in BoltBouncerLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in BoltBouncerObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.BoltBouncerParts -= BoltBouncerPartsNeeded;
+            MM.ResearchXp -= BoltBouncerXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            BoltBouncerPartsNeeded += 5;
+            MM.BoltBouncerLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void BoomBuster()
+    {
+        if (MM.BoomBusterParts >= BoomBusterPartsNeeded && MM.BoomBusterLevel <= 10 && MM.ResearchXp >= BoomBusterXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in BoomBusterLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in BoomBusterObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.BoomBusterParts -= BoomBusterPartsNeeded;
+            MM.ResearchXp -= BoomBusterXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            BoomBusterPartsNeeded += 5;
+            MM.BoomBusterLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void BlastBarrel()
+    {
+        if (MM.BlastBarrelParts >= BlastBarrelPartsNeeded && MM.BlastBarrelLevel <= 10 && MM.ResearchXp >= BlastBarrelXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in BlastBarrelLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in BlastBarrelObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.BlastBarrelParts -= BlastBarrelPartsNeeded;
+            MM.ResearchXp -= BlastBarrelXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            BlastBarrelPartsNeeded += 5;
+            MM.BlastBarrelLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void ThunderThumper()
+    {
+        if (MM.ThunderThumperParts >= ThunderThumperPartsNeeded && MM.ThunderThumperLevel <= 10 && MM.ResearchXp >= ThunderThumperXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in ThunderThumperLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in ThunderThumperObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.ThunderThumperParts -= ThunderThumperPartsNeeded;
+            MM.ResearchXp -= ThunderThumperXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            ThunderThumperPartsNeeded += 5;
+            MM.ThunderThumperLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void StormshotSniper()
+    {
+        if (MM.StormshotSniperParts >= StormshotSniperPartsNeeded && MM.StormshotSniperLevel <= 10 && MM.ResearchXp >= StormshotSniperXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in StormshotSniperLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in StormshotSniperObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.StormshotSniperParts -= StormshotSniperPartsNeeded;
+            MM.ResearchXp -= StormshotSniperXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            StormshotSniperPartsNeeded += 5;
+            MM.StormshotSniperLevel += 1;
+            MM.Xp += 50;
+        }
+    }
+    public void ShadowSlicer()
+    {
+        if (MM.ShadowSlicerParts >= ShadowSlicerPartsNeeded && MM.ShadowSlicerLevel <= 10 && MM.ResearchXp >= ShadowSlicerXpNeeded && MM.SturdyMechanicalParts >= 1)
+        {
+            foreach (Slider obj in ShadowSlicerLevel)
+            {
+                if (obj != null)
+                {
+                    obj.value += 1f;
+                }
+            }
+            foreach (GameObject obj in ShadowSlicerObj)
+            {
+                if (obj != null)
+                {
+                    obj.GetComponent<CustomGun>().spread -= 0.01f;
+                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
+                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
+                }
+            }
+            MM.ShadowSlicerParts -= ShadowSlicerPartsNeeded;
+            MM.ResearchXp -= ShadowSlicerXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            ShadowSlicerPartsNeeded += 5;
+            MM.ShadowSlicerLevel += 1;
             MM.Xp += 50;
         }
     }
 
-    public void UpgradeSMG2()
+    public void EagleEye()
     {
-        if (MM.ValkyrieM76Parts >= SMG2PartsNeeded && MM.ValkyrieM76Level <= 10 && MM.ResearchXp >= SMG2XpNeeded)
+        if (MM.EagleEyeParts >= EagleEyePartsNeeded && MM.EagleEyeLevel <= 10 && MM.ResearchXp >= EagleEyeXpNeeded && MM.SturdyMechanicalParts >= 1)
         {
-            foreach (GameObject obj in SMG2Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in ValkyrieM76Level)
+            foreach (Slider obj in EagleEyeLevel)
             {
                 if (obj != null)
                 {
                     obj.value += 1f;
                 }
             }
-            foreach (GameObject obj in ValkyrieM76)
+            foreach (GameObject obj in EagleEyeObj)
             {
                 if (obj != null)
                 {
@@ -291,290 +643,11 @@ public class UpgradeGuns : MonoBehaviour
                     obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
                 }
             }
-            MM.ValkyrieM76Parts -= SMG2PartsNeeded;
-            MM.ResearchXp -= SMG2XpNeeded;
-            SMG2PartsNeeded += 5;
-            MM.ValkyrieM76Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradePistol1()
-    {
-        if (MM.ReaperP12Parts >= Pistol1PartsNeeded && MM.ReaperP12Level <= 10 && MM.ResearchXp >= Pistol1XpNeeded)
-        {
-            foreach (GameObject obj in Pistol1Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in ReaperP12Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in ReaperP12)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.ReaperP12Parts -= Pistol1PartsNeeded;
-            MM.ResearchXp -= Pistol1XpNeeded;
-            Pistol1PartsNeeded += 5;
-            MM.ReaperP12Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradePistol2()
-    {
-        if (MM.PredatorP63Parts >= Pistol2PartsNeeded && MM.PredatorP63Level <= 10 && MM.ResearchXp >= Pistol2XpNeeded)
-        {
-            foreach (GameObject obj in Pistol2Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in PredatorP63Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in PredatorP63)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.PredatorP63Parts -= Pistol2PartsNeeded;
-            MM.ResearchXp -= Pistol2XpNeeded;
-            Pistol2PartsNeeded += 5;
-            MM.PredatorP63Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradeAR1()
-    {
-        if (MM.ThunderboltA16Parts >= AR1PartsNeeded && MM.ThunderboltA16Level <= 10 && MM.ResearchXp >= AR1XpNeeded)
-        {
-            foreach (GameObject obj in AR1Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in ThunderboltA16Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in ThunderboltA16)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.ThunderboltA16Parts -= AR1PartsNeeded;
-            MM.ResearchXp -= AR1XpNeeded;
-            AR1PartsNeeded += 5;
-            MM.ThunderboltA16Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradeAR2()
-    {
-        if (MM.GuardianA37Parts >= AR2PartsNeeded && MM.GuardianA37Level <= 10 && MM.ResearchXp >= AR2XpNeeded)
-        {
-            foreach (GameObject obj in AR2Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in GuardianA37Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in GuardianA37)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.GuardianA37Parts -= AR2PartsNeeded;
-            MM.ResearchXp -= AR2XpNeeded;
-            AR2PartsNeeded += 5;
-            MM.GuardianA37Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradeShotGun1()
-    {
-        if (MM.PhantomS47Parts >= ShotGun1PartsNeeded && MM.PhantomS47Level <= 10 && MM.ResearchXp >= ShotGun1XpNeeded)
-        {
-            foreach (GameObject obj in ShotGun1Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in PhantomS47Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in PhantomS47)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.PhantomS47Parts -= ShotGun1PartsNeeded;
-            MM.ResearchXp -= ShotGun1XpNeeded;
-            ShotGun1PartsNeeded += 5;
-            MM.PhantomS47Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradeShotGun2()
-    {
-        if (MM.HavocS13Parts >= ShotGun2PartsNeeded && MM.HavocS13Level <= 10 && MM.ResearchXp >= ShotGun2XpNeeded)
-        {
-            foreach (GameObject obj in ShotGun2Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in HavocS13Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in HavocS13)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.HavocS13Parts -= ShotGun2PartsNeeded;
-            MM.ResearchXp -= ShotGun2XpNeeded;
-            ShotGun2PartsNeeded += 5;
-            MM.HavocS13Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradeRocketLancher1()
-    {
-        if (MM.SabreR23Parts >= RocketLancher1PartsNeeded && MM.SabreR23Level <= 10 && MM.ResearchXp >= RocketLancher1XpNeeded)
-        {
-            foreach (GameObject obj in RocketLancher1Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in SabreR23Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in SabreR23)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.SabreR23Parts -= RocketLancher1PartsNeeded;
-            MM.ResearchXp -= RocketLancher1XpNeeded;
-            RocketLancher1PartsNeeded += 5;
-            MM.SabreR23Level += 1;
-            MM.Xp += 50;
-        }
-    }
-
-    public void UpgradeRocketLancher2()
-    {
-        if (MM.TitanR30Parts >= RocketLancher2PartsNeeded && MM.TitanR30Level <= 10 && MM.ResearchXp >= RocketLancher2XpNeeded)
-        {
-            foreach (GameObject obj in RocketLancher2Lock)
-            {
-                if (obj != null)
-                {
-                    obj.SetActive(false);
-                }
-            }
-            foreach (Slider obj in TitanR30Level)
-            {
-                if (obj != null)
-                {
-                    obj.value += 1f;
-                }
-            }
-            foreach (GameObject obj in TitanR30)
-            {
-                if (obj != null)
-                {
-                    obj.GetComponent<CustomGun>().spread -= 0.01f;
-                    obj.GetComponent<CustomGun>().timeBetweenShots -= 0.01f;
-                    obj.GetComponent<CustomGun>().reloadTime -= 0.01f;
-                }
-            }
-            MM.TitanR30Parts -= RocketLancher2PartsNeeded;
-            MM.ResearchXp -= RocketLancher2XpNeeded;
-            RocketLancher2PartsNeeded += 5;
-            MM.TitanR30Level += 1;
+            MM.EagleEyeParts -= EagleEyePartsNeeded;
+            MM.ResearchXp -= EagleEyeXpNeeded;
+            MM.SturdyMechanicalParts -= 1;
+            EagleEyePartsNeeded += 5;
+            MM.EagleEyeLevel += 1;
             MM.Xp += 50;
         }
     }

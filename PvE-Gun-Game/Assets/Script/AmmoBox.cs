@@ -31,7 +31,7 @@ public class AmmoBox : MonoBehaviour
         {
             ClosedLid.SetActive(false);
             OpenLid.SetActive(true);
-            MM.PlayerLevel += GiveXP;
+            MM.Xp += GiveXP;
             // openParticle.Play();
             Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
             Instantiate(Ammo[Random.Range(0, Ammo.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);

@@ -34,7 +34,7 @@ public class LootBox : MonoBehaviour
         {
         ClosedLid.SetActive(false);
         OpenLid.SetActive(true);
-        MM.PlayerLevel += GiveXP;
+        MM.Xp += GiveXP;
         // openParticle.Play();
         Instantiate(Gun[Random.Range(0, Gun.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);
         Instantiate(Item[Random.Range(0, Item.Count)], Spawnpoint.transform.position, Spawnpoint.transform.rotation);

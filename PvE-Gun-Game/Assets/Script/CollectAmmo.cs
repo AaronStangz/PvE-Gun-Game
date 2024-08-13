@@ -24,7 +24,7 @@ public class CollectAmmo : MonoBehaviour
 
     public void CollectItem()
     {
-        MM.PlayerLevel += GiveXP;
+        MM.Xp += GiveXP;
         MM.HeavyBullets += GiveHeavyBullets;
         MM.LightBullets += GiveLightBullets;
         MM.MediumBullets += GiveMediumBullets;

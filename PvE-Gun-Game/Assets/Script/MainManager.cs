@@ -16,73 +16,118 @@ public class MainManager : MonoBehaviour
     public int Shells;
     public int Rockets;
 
-    [Header("GunParts")]
-    public int BlackhawkS14Parts;
-    public int SentinelS37Parts;
-    public int VanguardM17Parts;
-    public int ValkyrieM76Parts;
-    public int ReaperP12Parts;
-    public int PredatorP63Parts;
-    public int ThunderboltA16Parts;
-    public int GuardianA37Parts;
-    public int PhantomS47Parts;
-    public int HavocS13Parts;
-    public int SabreR23Parts;
-    public int TitanR30Parts;
-
     [Header("GunLevel")]
-    public int BlackhawkS14Level;
-    public int SentinelS37Level;
-    public int VanguardM17Level;
-    public int ValkyrieM76Level;
-    public int ReaperP12Level;
-    public int PredatorP63Level;
-    public int ThunderboltA16Level;
-    public int GuardianA37Level;
-    public int PhantomS47Level;
-    public int HavocS13Level;
-    public int SabreR23Level;
-    public int TitanR30Level;
+    // ARS
+    public int BlazeBreakerLevel;
+    public int StormScorcherLevel;
+    public int PulsefireLevel;
+    // SMG
+    public int SprayStrikerLevel;
+    public int BuzzBlitzerLevel;
+    public int RattleRipperLevel;
+    // Pistols
+    public int PowderPopperLevel;
+    public int QuickdrawBlasterLevel;
+    public int BoltBouncerLevel;
+    // Shotguns
+    public int BoomBusterLevel;
+    public int BlastBarrelLevel;
+    public int ThunderThumperLevel;
+    // Snipers
+    public int StormshotSniperLevel;
+    public int ShadowSlicerLevel;
+    public int EagleEyeLevel;
 
-    [Header("Mats")]
-    public int WoodPlanks;
+    [Header("GunParts")]
+    // ARS
+    public int BlazeBreakerParts;
+    public int StormScorcherParts;
+    public int PulsefireParts;
+    // SMG
+    public int SprayStrikerParts;
+    public int BuzzBlitzerParts;
+    public int RattleRipperParts;
+    // Pistols
+    public int PowderPopperParts;
+    public int QuickdrawBlasterParts;
+    public int BoltBouncerParts;
+    // Shotguns
+    public int BoomBusterParts;
+    public int BlastBarrelParts;
+    public int ThunderThumperParts;
+    // Snipers
+    public int StormshotSniperParts;
+    public int ShadowSlicerParts;
+    public int EagleEyeParts;
+
+    [Header("Guns")]
+    // ARS
+    public bool BlazeBreaker;
+    public bool StormScorcher;
+    public bool Pulsefire;
+    // SMG
+    public bool SprayStriker;
+    public bool BuzzBlitzer;
+    public bool RattleRipper;
+    // Pistols
+    public bool PowderPopper;
+    public bool QuickdrawBlaster;
+    public bool BoltBouncer;
+    // Shotguns
+    public bool BoomBuster;
+    public bool BlastBarrel;
+    public bool ThunderThumper;
+    // Snipers
+    public bool StormshotSniper;
+    public bool ShadowSlicer;
+    public bool EagleEye;
+
+    [Header("Mat")]
     public int Gold;
+    public int Planks;
+    public int SturdyMechanicalParts;
+    public int SleekMechanicalParts;
+    public int RustyMechanicalParts;
 
+    public TMP_Text PowerLevelText;
     public TMP_Text PlayerLevelText;
-    public int PlayerLevel;
+    public TMP_Text GoldText;
+    public int PowerLevel;
     public int Xp;
     public int ResearchXp;
 
     public void Update()
     {
-        PlayerLevelText.text = "Power Level:" + PlayerLevel + " ";
+        GoldText.text = Gold + " ";
+        PowerLevelText.text = PowerLevel + " ";
+        PlayerLevelText.text = Xp + " ";
         if (Xp == 100)
         {
-            PlayerLevel = 1;
+            PowerLevel = 1;
         }
         if (Xp == 200)
         {
-            PlayerLevel = 2;
+            PowerLevel = 2;
         }
         if (Xp == 400)
         {
-            PlayerLevel = 3;
+            PowerLevel = 3;
         }
         if (Xp == 800)
         {
-            PlayerLevel = 4;
+            PowerLevel = 4;
         }
         if (Xp == 1600)
         {
-            PlayerLevel = 5;
+            PowerLevel = 5;
         }
         if (Xp == 2400)
         {
-            PlayerLevel = 6;
+            PowerLevel = 6;
         }
         if (Xp == 4800)
         {
-            PlayerLevel = 7;
+            PowerLevel = 7;
         }
     }
 }
