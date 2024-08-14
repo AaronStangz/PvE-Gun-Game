@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Buy : MonoBehaviour
 {
-    private GameObject mainManager;
+    public GameObject mainManager;
     MainManager MM;
 
     public int GoldNeeded;
@@ -48,6 +48,7 @@ public class Buy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainManager = GameObject.Find("MainManager");
         MM = mainManager.GetComponent<MainManager>();
     }
 
@@ -59,9 +60,6 @@ public class Buy : MonoBehaviour
 
     public void Bought()
     {
-        GameObject.Find("mainManager");
-        MM = mainManager.GetComponent<MainManager>();
-
         if (MM.Gold >= GoldNeeded)
         {
             MM.Gold -= GoldNeeded;
@@ -95,6 +93,7 @@ public class Buy : MonoBehaviour
             MM.MediumBullets += GiveMediumBullets;
             MM.Shells += GiveShells;
             MM.Rockets += GiveRockets;
+            Destroy(gameObject);
         }
     }
 }

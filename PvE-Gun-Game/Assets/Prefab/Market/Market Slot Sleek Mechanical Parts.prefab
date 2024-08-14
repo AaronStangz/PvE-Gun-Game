@@ -425,7 +425,7 @@ RectTransform:
   m_GameObject: {fileID: 6069050697108093491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5040731681708839892}
@@ -454,8 +454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca3ac0e091b391499ec7e5f3eeeb446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainManager: {fileID: 0}
   GoldNeeded: 500
   GoldText: {fileID: 6780693202815627792}
+  BoughtText: {fileID: 6691109986331840801, guid: 9b1bc826b4236ec4fa11441526a0aec0,
+    type: 3}
   GiveHeavyBullets: 0
   GiveLightBullets: 0
   GiveMediumBullets: 0
